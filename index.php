@@ -15,13 +15,11 @@ $twig = Twig::create('templates', ['cache' => false]);
 // Add Twig-View Middleware
 $app->add(TwigMiddleware::create($app, $twig));
 
-
 $app->get('/', function (Request $request, Response $response, $args) {
     $view = Twig::fromRequest($request);
     return  $view->render($response, 'index.html'); 
  
 });
-
 
 $app->get('/home', function (Request $request, Response $response, $args) {
     $view = Twig::fromRequest($request);
