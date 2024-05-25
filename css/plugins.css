@@ -1,0 +1,48 @@
+/*-----------------------------------------------------------------------------------
+
+    Theme Name: Sowind - Solar & Renewable Energy HTML Template
+    Description: Solar & Renewable Energy HTML Template
+    Author: Website Design Templates
+    Version: 1.0
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+			[ All CSS Plugins & Default Classes File ]
+-----------------------------------------------------------------*/
+
+/* == bootstrap == */
+@import url("plugins/bootstrap.min.css");
+
+/* == animate == */
+@import url("plugins/animate.css");
+
+/* == fontawesome icon font == */
+@import url("plugins/fontawesome-all.min.css");
+
+/* == themify font == */
+@import url("plugins/themify-icons.css");
+
+/* == flaticon font == */
+@import url("plugins/flaticon.css");
+
+/* == magnific-popup == */
+@import url("plugins/magnific-popup.css");
+
+/* == owl.carousel == */
+@import url("plugins/owl.carousel.css");
+
+/* == owl theme.carousel == */
+@import url("plugins/owl.theme.default.css");
+
+/* == lightgallery css == */
+@import url("plugins/lightgallery.css");
+
+/* == default classes == */
+@import url("plugins/default.css");
+
+/* == navigation == */
+@import url("plugins/nav-menu.css");
+
+/* == prism css == */
+@import url("plugins/prism.css");

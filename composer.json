@@ -1,0 +1,20 @@
+{
+    "name": "cristi/html",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Cristi\\Html\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "cristi",
+            "email": "dumitriucristian@yahoo.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.6",
+        "slim/twig-view": "^3.4"
+    }
+}

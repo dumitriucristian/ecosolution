@@ -1,0 +1,79 @@
+  /*
+    Flaticon icon font: Flaticon
+    Creation date: 18/05/2018 08:32
+    */
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../../fonts/Flaticon.eot");
+  src: url("../../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../../fonts/Flaticon.woff") format("woff"),
+       url("../../fonts/Flaticon.ttf") format("truetype"),
+       url("../../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../../fonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+  font-style: normal;
+}
+
+.flaticon-001-electricity:before { content: "\f100"; }
+.flaticon-002-gas:before { content: "\f101"; }
+.flaticon-003-water:before { content: "\f102"; }
+.flaticon-004-socket:before { content: "\f103"; }
+.flaticon-005-tower:before { content: "\f104"; }
+.flaticon-006-price-tag:before { content: "\f105"; }
+.flaticon-007-iceberg:before { content: "\f106"; }
+.flaticon-008-whale:before { content: "\f107"; }
+.flaticon-009-book:before { content: "\f108"; }
+.flaticon-010-ecology-2:before { content: "\f109"; }
+.flaticon-011-bicycle:before { content: "\f10a"; }
+.flaticon-012-battery-1:before { content: "\f10b"; }
+.flaticon-013-recycle-bag:before { content: "\f10c"; }
+.flaticon-014-shirt:before { content: "\f10d"; }
+.flaticon-015-lightbulb:before { content: "\f10e"; }
+.flaticon-016-co2:before { content: "\f10f"; }
+.flaticon-017-greenhouse-1:before { content: "\f110"; }
+.flaticon-018-settings:before { content: "\f111"; }
+.flaticon-019-paper:before { content: "\f112"; }
+.flaticon-020-sun:before { content: "\f113"; }
+.flaticon-021-recycle:before { content: "\f114"; }
+.flaticon-022-tree:before { content: "\f115"; }
+.flaticon-023-nuclear:before { content: "\f116"; }
+.flaticon-024-ecology-1:before { content: "\f117"; }
+.flaticon-025-flask:before { content: "\f118"; }
+.flaticon-026-global-warming:before { content: "\f119"; }
+.flaticon-027-factory:before { content: "\f11a"; }
+.flaticon-028-rain:before { content: "\f11b"; }
+.flaticon-029-electric-car:before { content: "\f11c"; }
+.flaticon-030-recycle-bin:before { content: "\f11d"; }
+.flaticon-031-plant-1:before { content: "\f11e"; }
+.flaticon-032-ecology:before { content: "\f11f"; }
+.flaticon-033-save-water:before { content: "\f120"; }
+.flaticon-034-growth:before { content: "\f121"; }
+.flaticon-035-stump:before { content: "\f122"; }
+.flaticon-036-greenhouse:before { content: "\f123"; }
+.flaticon-037-shopping-bag:before { content: "\f124"; }
+.flaticon-038-paper-bag:before { content: "\f125"; }
+.flaticon-039-toilet-paper:before { content: "\f126"; }
+.flaticon-040-eco-fuel:before { content: "\f127"; }
+.flaticon-041-barrel:before { content: "\f128"; }
+.flaticon-042-solar-panel:before { content: "\f129"; }
+.flaticon-043-faucet:before { content: "\f12a"; }
+.flaticon-044-light:before { content: "\f12b"; }
+.flaticon-045-battery:before { content: "\f12c"; }
+.flaticon-046-green-energy:before { content: "\f12d"; }
+.flaticon-047-windmill:before { content: "\f12e"; }
+.flaticon-048-plant:before { content: "\f12f"; }
+.flaticon-049-flower:before { content: "\f130"; }
+.flaticon-050-rose:before { content: "\f131"; }

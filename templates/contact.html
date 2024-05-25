@@ -1,0 +1,181 @@
+{% extends "base-two.html" %}
+
+{% block body %}
+        <!-- PAGE TITLE
+        ================================================== -->
+        <section class="page-title-section bg-img cover-background dark-overlay top-position" data-overlay-dark="6" data-background="img/custom/planta1-resized.jpg" style="position:relative; top:-7px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="display-3">Contact Us</h1>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#!">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="line-animated">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="p-1-9 p-sm-2-3 bg-white bottom-0 left d-inline-block position-absolute z-index-3"></div>
+            <div class="position-absolute shape-1 d-none d-sm-block"></div>
+            <div class="px-6 px-sm-9 py-3 py-sm-4 bg-white bottom-0 right d-inline-block position-absolute z-index-3"></div>
+        </section>
+
+        <!-- CONTACT FORM
+        ================================================== -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="pe-lg-1-9">
+                            <div class="card card-style-03 mb-1-9">
+                                <div class="card-body p-1-6 p-sm-1-9">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="ti-location-pin text-secondary z-index-9 display-8 position-relative"></i>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h4 class="h5 text-white">Location</h4>
+                                            <span class="text-white opacity7">José Aguirre 1422, Cochabamba - Bolivia</span>
+                                        </div>
+                                    </div>
+                                    <i class="ti-location-pin bg-icon"></i>
+                                </div>
+                            </div>
+                            <div class="card card-style-03 mb-1-9">
+                                <div class="card-body p-1-6 p-sm-1-9">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="ti-mobile text-secondary z-index-9 display-8 position-relative"></i>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h4 class="h5 text-white">Phone Number</h4>
+                                            <span class="text-white opacity7">+591 710799173</span>
+                                        </div>
+                                    </div>
+                                    <i class="ti-mobile bg-icon"></i>
+                                </div>
+                            </div>
+                            <div class="card card-style-03">
+                                <div class="card-body p-1-6 p-sm-1-9">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="ti-email text-secondary z-index-9 display-8 position-relative"></i>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h4 class="h5 text-white">Email Address</h4>
+                                            <span class="text-white opacity7">info@ecosolution.com.bo</span>
+                                        </div>
+                                    </div>
+                                    <i class="ti-email bg-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <h2 class="mb-4">Contact Us</h2>
+                        <form class="contact quform" action="quform/contact.php" method="post" enctype="multipart/form-data" onclick="">
+                            <div class="quform-elements">
+                                <div class="row">
+
+                                    <!-- Begin Text input element -->
+                                    <div class="col-md-6">
+                                        <div class="quform-element form-group">
+                                            <div class="quform-input">
+                                                <input class="form-control" id="name" type="text" name="name" placeholder="Your name here" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Text input element -->
+
+                                    <!-- Begin Text input element -->
+                                    <div class="col-md-6">
+                                        <div class="quform-element form-group">
+                                            <div class="quform-input">
+                                                <input class="form-control" id="email" type="text" name="email" placeholder="Your email here" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Text input element -->
+
+                                    <!-- Begin Text input element -->
+                                    <div class="col-md-6">
+                                        <div class="quform-element form-group">
+                                            <div class="quform-input">
+                                                <input class="form-control" id="subject" type="text" name="subject" placeholder="Your subject here" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Text input element -->
+
+                                    <!-- Begin Text input element -->
+                                    <div class="col-md-6">
+                                        <div class="quform-element form-group">
+                                            <div class="quform-input">
+                                                <input class="form-control" id="phone" type="text" name="phone" placeholder="Your phone here" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Text input element -->
+
+                                    <!-- Begin Textarea element -->
+                                    <div class="col-md-12">
+                                        <div class="quform-element form-group">
+                                            <div class="quform-input">
+                                                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Tell us a few words"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Textarea element -->
+
+                                    <!-- Begin Captcha element -->
+                                    <div class="col-md-12">
+                                        <div class="quform-element">
+                                            <div class="form-group">
+                                                <div class="quform-input">
+                                                    <input class="form-control" id="type_the_word" type="text" name="type_the_word" placeholder="Type the below word" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="quform-captcha">
+                                                    <div class="quform-captcha-inner">
+                                                        <img src="quform/images/captcha/courier-new-light.png" alt="...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Captcha element -->
+
+                                    <!-- Begin Submit button -->
+                                    <div class="col-md-12">
+                                        <div class="quform-submit-inner">
+                                            <button class="btn-style1" type="submit">Send Message</button>
+                                        </div>
+                                        <div class="quform-loading-wrap text-start"><span class="quform-loading"></span></div>
+                                    </div>
+                                    <!-- End Submit button -->
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT INFO
+        ================================================== -->
+        <section class="p-0 bg-light">
+            <div class="container-fuild">
+                <iframe class="contact-map" id="gmap_canvas" src="https://maps.google.com/maps?q=Cochabamba&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </div>
+        </section>
+
+
+        {% endblock %}
