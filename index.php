@@ -32,25 +32,19 @@ $app->get('/home', function (Request $request, Response $response, $args) {
 $twig = Twig::create('templates', ['cache' => false]);
 
 $app->get('/contact', function (Request $request, Response $response, $args) {
-    //var_dump('test'); die('sss');
     $view = Twig::fromRequest($request);
    return  $view->render($response, 'contact.html'); 
-    //print_r($view); die();
 })->setName('contact');
 
 
 $app->get('/services', function (Request $request, Response $response, $args) {
-    //var_dump('test'); die('sss');
     $view = Twig::fromRequest($request);
    return  $view->render($response, 'services.html'); 
-    //print_r($view); die();
 })->setName('services');
 
 $app->get('/about', function (Request $request, Response $response, $args) {
-    //var_dump('test'); die('sss');
     $view = Twig::fromRequest($request);
    return  $view->render($response, 'about.html'); 
-    //print_r($view); die();
 })->setName('about');
 
 $app->run();
