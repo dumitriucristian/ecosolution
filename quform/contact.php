@@ -1,5 +1,5 @@
 <?php
-
+//var_dump($_ENV); die();
 /**
  * Enable debug mode. Quform will try to display any fatal PHP errors or exceptions at
  * your form. It's useful to have this enabled while developing your form, but
@@ -39,7 +39,7 @@ $config['email'] = true;
  *     'recipient2@example.com'
  * );
  */
-$config['recipients'] = 'addyour@emailhere';
+$config['recipients'] = $_ENV['MAIL_USERNAME'];
 
 /**
  * Set the "From" address of the emails. You should set this to the contact
@@ -59,7 +59,7 @@ $config['recipients'] = 'addyour@emailhere';
  *
  * $config['from'] = '%email%';
  */
-$config['from'] = 'addyour@emailhere';
+$config['from'] = $_ENV['MAIL_USERNAME'];
 
 /**
  * The subject of the notification email message. %name% will be replaced
@@ -160,12 +160,12 @@ $config['uploadUrl'] = '';
  * password - SMTP password
  * encryption - SMTP encryption (e.g. ssl or tls)
  */
+
 $config['smtp'] = array(
-    'host' => '',
-    'port' => 25,
-    'username' => '',
-    'password' => '',
-    'encryption' => ''
+    'host' => $_ENV['SMTP_HOST'],
+    'port' => $_ENV['SMTP_PORT'],
+    'username' => $_ENV['MAIL_USERNAME'],
+    'password' => $_ENV['MAIL_PASSWORD'],
 );
 
 /**
