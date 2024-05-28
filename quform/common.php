@@ -30,6 +30,16 @@ defined('QUFORM_HTMLSPECIALCHARS_DOUBLE_ENCODE') || define('QUFORM_HTMLSPECIALCH
 // Include required libraries
 require_once QUFORM_ROOT . '/vendor/autoload.php';
 require_once QUFORM_ROOT . '/lib/Quform.php';
+
+use Dotenv\Dotenv;
+
+
+   
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+//var_dump('test');
+//var_dump($_ENV); die();
+
 Quform::registerAutoload();
 
 // Instantiate the form
