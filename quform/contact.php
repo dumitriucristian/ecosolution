@@ -167,7 +167,7 @@ $config['smtp'] = array(
     'username' => $_ENV['MAIL_USERNAME'],
     'password' => $_ENV['MAIL_PASSWORD'],
 );
-
+var_dump($config['smtp']); die();
 /**
  * (Optional) Add extra data to the email by copying any of these lines to the empty line below this comment
  *
