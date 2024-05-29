@@ -359,6 +359,7 @@ function process(Quform $form, array &$config)
             }
 
             if ($config['email']) {
+                var_dump($config['smtp']);
                 // Get a new PHPMailer instance
                 $mailer = Quform::newPHPMailer($config['smtp']);
 
