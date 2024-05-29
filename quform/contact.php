@@ -166,6 +166,7 @@ $config['smtp'] = array(
     'port' => $_ENV['SMTP_PORT'],
     'username' => $_ENV['MAIL_USERNAME'],
     'password' => $_ENV['MAIL_PASSWORD'],
+    'encryption' => $_ENV['tls'],
 );
 //var_dump($config['smtp']); die();
 /**
