@@ -166,7 +166,7 @@ $config['smtp'] = array(
     'port' => $_ENV['SMTP_PORT'],
     'username' => $_ENV['MAIL_USERNAME'],
     'password' => $_ENV['MAIL_PASSWORD'],
-    'encryption' => '',
+    'encryption' => 'ssl',
 );
 //var_dump($config['smtp']); die();
 /**
@@ -359,7 +359,7 @@ function process(Quform $form, array &$config)
             }
 
             if ($config['email']) {
-                var_dump($config['smtp']);
+               // var_dump($config['smtp']);
                 // Get a new PHPMailer instance
                 $mailer = Quform::newPHPMailer($config['smtp']);
 
