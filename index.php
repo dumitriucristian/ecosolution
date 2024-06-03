@@ -71,7 +71,7 @@ $app->add(function ($request, $handler) use ($translator) {
 });
 
 
-$app->get('/', function (Request $request, Response $response, $args) {
+$app->get('/{locale}', function (Request $request, Response $response, $args) {
     $view = Twig::fromRequest($request);
     return  $view->render($response, 'index.html'); 
  
@@ -93,7 +93,7 @@ $app->get('/{locale}/home', function (Request $request, Response $response, $arg
 
 $twig = Twig::create('templates', ['cache' => false]);
 
-$app->get('/contact', function (Request $request, Response $response, $args) {
+$app->get('/{locale}/contact', function (Request $request, Response $response, $args) {
     $view = Twig::fromRequest($request);
 
    return  $view->render($response, 'contact.html'); 
@@ -111,12 +111,12 @@ $app->post('/contact', function (Request $request, Response $response, $args) {
    return  $view->render($response, 'contact.html', $data); 
 })->setName('contact');
 
-$app->get('/services', function (Request $request, Response $response, $args) {
+$app->get('/{locale}/services', function (Request $request, Response $response, $args) {
     $view = Twig::fromRequest($request);
    return  $view->render($response, 'services.html'); 
 })->setName('services');
 
-$app->get('/about', function (Request $request, Response $response, $args) {
+$app->get('/{locale}/about', function (Request $request, Response $response, $args) {
     $view = Twig::fromRequest($request);
    return  $view->render($response, 'about.html'); 
 })->setName('about');
