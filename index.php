@@ -5,7 +5,8 @@ use Slim\Factory\AppFactory;
 use Slim\Views\Twig;
 use Slim\Views\TwigMiddleware;
 use Dotenv\Dotenv;
-
+use Symfony\Component\Translation\Translator;
+use Symfony\Component\Translation\Loader\ArrayLoader;
 require __DIR__ . '/vendor/autoload.php';
 
    
@@ -13,13 +14,62 @@ $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 //var_dump($_ENV);
 
+
+
+
 $app = AppFactory::create();
 //$app->addRoutingMiddleware();
 // Create Twig
 $twig = Twig::create('templates', ['cache' => false]);
 
+// Set up Symfony Translator
+$translator = new Translator('en');
+$translator->addLoader('array', new ArrayLoader());
+
+// Load translations
+$translations = [
+    'en' => [
+        'home' => [
+            'random' => 'text1',
+            'ceva' => 'ceva random text',
+        ],
+    ],
+    'es' => [
+        'home' => [
+            'random' => 'Algún texto aleatorio',
+            'ceva' => 'ceva, random text',
+        ],
+    ],
+    // Add more languages and translations as needed
+];
+
+foreach ($translations as $locale => $messages) {
+    $translator->addResource('array', $messages, $locale);
+}
+
 // Add Twig-View Middleware
 $app->add(TwigMiddleware::create($app, $twig));
+
+
+
+// Middleware to handle the language selection
+$app->add(function ($request, $handler) use ($translator) {
+    $path = $request->getUri()->getPath();
+    $segments = explode('/', trim($path, '/'));
+    $locale = $segments[0] ?? 'en';
+
+    if (!in_array($locale, ['en', 'es'])) {
+        // Default to English if an unsupported language is provided
+        $locale = 'en';
+    }
+
+    $translator->setLocale($locale);
+    $request = $request->withAttribute('translator', $translator);
+    $request = $request->withAttribute('locale', $locale);
+
+    return $handler->handle($request);
+});
+
 
 $app->get('/', function (Request $request, Response $response, $args) {
     $view = Twig::fromRequest($request);
@@ -27,9 +77,17 @@ $app->get('/', function (Request $request, Response $response, $args) {
  
 });
 
-$app->get('/home', function (Request $request, Response $response, $args) {
+$app->get('/{locale}/home', function (Request $request, Response $response, $args) use ($translations){
+
+  
+    $locale = $request->getAttribute('locale');
+    if(!in_array($locale,$translations)) {$locale = 'en'; }
+    $objectTranslations = (json_decode(json_encode($translations)));
+
+    $translations = ["translations" => $objectTranslations->$locale];
+
     $view = Twig::fromRequest($request);
-    return  $view->render($response, 'index.html'); 
+    return  $view->render($response, 'index.html',  $translations); 
  
 });
 
@@ -48,7 +106,7 @@ $app->post('/contact', function (Request $request, Response $response, $args) {
       // $email = filter_var($data['email'], FILTER_SANITIZE_EMAIL);
      //  $message = filter_var($data['message'], FILTER_SANITIZE_STRING);
 
-        $data = ['success'];
+     $data = ['success'];
     $view = Twig::fromRequest($request);
    return  $view->render($response, 'contact.html', $data); 
 })->setName('contact');

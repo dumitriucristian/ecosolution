@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '0039d7487a4ead61b2873bf7a85ddf2f5dd0fb18',
+        'reference' => 'c0a0fef12ca423d3788b36736e4d8508fa57da06',
         'name' => 'cristi/html',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '0039d7487a4ead61b2873bf7a85ddf2f5dd0fb18',
+            'reference' => 'c0a0fef12ca423d3788b36736e4d8508fa57da06',
             'dev_requirement' => false,
         ),
         'fig/http-message-util' => array(
@@ -201,6 +201,30 @@
             'aliases' => array(),
             'reference' => 'c565ad1e63f30e7477fc40738343c62b40bc672d',
             'dev_requirement' => false,
+        ),
+        'symfony/translation' => array(
+            'pretty_version' => 'v7.1.0',
+            'version' => '7.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/translation',
+            'aliases' => array(),
+            'reference' => '583d18e461eada8270ca44b7d99f07abf1ab048e',
+            'dev_requirement' => false,
+        ),
+        'symfony/translation-contracts' => array(
+            'pretty_version' => 'v3.5.0',
+            'version' => '3.5.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/translation-contracts',
+            'aliases' => array(),
+            'reference' => 'b9d2189887bb6b2e0367a9fc7136c5239ab9b05a',
+            'dev_requirement' => false,
+        ),
+        'symfony/translation-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '2.3|3.0',
+            ),
         ),
         'twig/twig' => array(
             'pretty_version' => 'v3.10.3',
