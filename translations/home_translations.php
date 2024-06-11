@@ -3,6 +3,8 @@
 // Load translations
 $translations = [
     'en' => [
+
+        //home page
         'home' => [
             'Hero' => [
                 'line_one' => "EXPERTS IN WASTE PROCESSING",
@@ -70,6 +72,8 @@ $translations = [
             ],
             "quote" => "The Earth does not belong to us; we belong to the Earth. It is our responsibility to protect and preserve it for future generations.",
         ],
+
+        //service page
         'services' => [
             'header' => "We eliminate and prohibit all landfills",
             'main_services' => [
@@ -146,6 +150,8 @@ $translations = [
 
         ],
     ],
+    
+    //spanish translation
     'es' => [
         'home' => [
             'random' => 'Algún texto aleatorio',
