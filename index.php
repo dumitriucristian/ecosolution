@@ -11,7 +11,6 @@ require __DIR__ . '/vendor/autoload.php';
 
 //translations
 require __DIR__ . '/translations/home_translations.php';
-require __DIR__ . '/translations/services_translations.php';
    
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
