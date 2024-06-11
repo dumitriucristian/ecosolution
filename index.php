@@ -9,6 +9,9 @@ use Symfony\Component\Translation\Translator;
 use Symfony\Component\Translation\Loader\ArrayLoader;
 require __DIR__ . '/vendor/autoload.php';
 
+//translations
+require __DIR__ . '/translations/home_translations.php';
+require __DIR__ . '/translations/services_translations.php';
    
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -26,22 +29,7 @@ $twig = Twig::create('templates', ['cache' => false]);
 $translator = new Translator('en');
 $translator->addLoader('array', new ArrayLoader());
 
-// Load translations
-$translations = [
-    'en' => [
-        'home' => [
-            'random' => 'text1',
-            'ceva' => 'ceva random text',
-        ],
-    ],
-    'es' => [
-        'home' => [
-            'random' => 'Algún texto aleatorio',
-            'ceva' => 'ceva, random text',
-        ],
-    ],
-    // Add more languages and translations as needed
-];
+
 
 foreach ($translations as $locale => $messages) {
     $translator->addResource('array', $messages, $locale);
@@ -84,8 +72,8 @@ $app->get('/{locale}/home', function (Request $request, Response $response, $arg
     if(!in_array($locale,$translations)) {$locale = 'en'; }
     $objectTranslations = (json_decode(json_encode($translations)));
 
-    $translations = ["translations" => $objectTranslations->$locale];
-
+    $translations = ["translations" => $objectTranslations->$locale->home];
+   
     $view = Twig::fromRequest($request);
     return  $view->render($response, 'index.html',  $translations); 
  
@@ -111,9 +99,16 @@ $app->post('/contact', function (Request $request, Response $response, $args) {
    return  $view->render($response, 'contact.html', $data); 
 })->setName('contact');
 
-$app->get('/{locale}/services', function (Request $request, Response $response, $args) {
+$app->get('/{locale}/services', function (Request $request, Response $response, $args) use($translations){
+
+    $locale = $request->getAttribute('locale');
+    if(!in_array($locale,$translations)) {$locale = 'en'; }
+    $objectTranslations = (json_decode(json_encode($translations)));
+
+    $translations = ["translations" => $objectTranslations->$locale->services];
+
     $view = Twig::fromRequest($request);
-   return  $view->render($response, 'services.html'); 
+   return  $view->render($response, 'services.html', $translations); 
 })->setName('services');
 
 $app->get('/{locale}/about', function (Request $request, Response $response, $args) {
