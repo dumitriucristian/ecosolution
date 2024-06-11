@@ -11,6 +11,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 //translations
 require __DIR__ . '/translations/home_translations.php';
+
    
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -58,9 +59,17 @@ $app->add(function ($request, $handler) use ($translator) {
 });
 
 
-$app->get('/{locale}', function (Request $request, Response $response, $args) {
+$app->get('/', function (Request $request, Response $response, $args) use ($translations) {
+    $locale = 'en';
+
+   $locale = $request->getAttribute('locale');
+    if(!in_array($locale,$translations)) {$locale = 'en'; }
+    $objectTranslations = (json_decode(json_encode($translations)));
+
+    $translations = ["translations" => $objectTranslations->$locale->home];
+   
     $view = Twig::fromRequest($request);
-    return  $view->render($response, 'index.html'); 
+    return  $view->render($response, 'index.html',  $translations); 
  
 });
 
