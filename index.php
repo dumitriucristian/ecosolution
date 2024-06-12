@@ -17,7 +17,7 @@ $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 //var_dump($_ENV);
 
-
+$languages = ['es','en'];
 
 
 $app = AppFactory::create();
@@ -77,11 +77,10 @@ $app->get('/{locale}/home', function (Request $request, Response $response, $arg
 
   
     $locale = $request->getAttribute('locale');
-    if(!in_array($locale,$translations)) {$locale = 'en'; }
-    $objectTranslations = (json_decode(json_encode($translations)));
 
+    if(!array_key_exists($locale, $translations)) {$locale = 'en'; }
+    $objectTranslations = (json_decode(json_encode($translations)));
     $translations = ["translations" => $objectTranslations->$locale->home];
-   
     $view = Twig::fromRequest($request);
     return  $view->render($response, 'index.html',  $translations); 
  
@@ -97,11 +96,6 @@ $app->get('/{locale}/contact', function (Request $request, Response $response, $
 
 $app->post('/contact', function (Request $request, Response $response, $args) {
 
-       //$data = $request->getParsedBody();
-      // $name = filter_var($data['name'], FILTER_SANITIZE_STRING);
-      // $email = filter_var($data['email'], FILTER_SANITIZE_EMAIL);
-     //  $message = filter_var($data['message'], FILTER_SANITIZE_STRING);
-
      $data = ['success'];
     $view = Twig::fromRequest($request);
    return  $view->render($response, 'contact.html', $data); 
@@ -110,7 +104,7 @@ $app->post('/contact', function (Request $request, Response $response, $args) {
 $app->get('/{locale}/services', function (Request $request, Response $response, $args) use($translations){
 
     $locale = $request->getAttribute('locale');
-    if(!in_array($locale,$translations)) {$locale = 'en'; }
+    if(!array_key_exists($locale, $translations)) {$locale = 'en'; }
     $objectTranslations = (json_decode(json_encode($translations)));
 
     $translations = ["translations" => $objectTranslations->$locale->services];

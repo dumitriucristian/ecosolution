@@ -149,14 +149,179 @@ $translations = [
             ]
 
         ],
+        'about_us' => [
+            'head' => 'ABOUT US',
+            'about_us' => `ABOUT US`,
+            'text' => 'Secialized in providing execution and consulting services in 
+            industrial engineering, environmental engineering, mechanical engineering, petroleum and natural gas engineering.',
+            'project_management' => 'Project management',
+            'consultancy' => 'consultancy',
+            'install' => 'install',
+            'working' => 'working progress',
+            'desing' => 'Design Process',
+            'budget' => 'Budget Planning',
+            'aquisition' => 'Aquisition and Installation',
+            'training' => 'Training and Maintanence'
+        ]
     ],
     
     //spanish translation
     'es' => [
+
+        //home page
         'home' => [
-            'random' => 'Algún texto aleatorio',
-            'ceva' => 'ceva, random text',
+            'Hero' => [
+                'line_one' => "EXPERTOS EN PROCESAMIENTO DE RESIDUOS",
+                "line_two" => "Transformamos cualquier tipo de desechos en energía con una eficiencia del 98%.",
+                "cta_button" => "Ask how",
+            ],
+            'feature_one' => [
+                "title" => "Confianza y garantía",
+                "content" => "Sistema homologado y patentado en la UE, se beneficia de asistencia técnica y formación especializada, mantenimiento y revisión.",
+            ],
+            'feature_two' => [
+                "title" => "Eficiencia y potencia",
+                "content" => "Eficiencia energética del 98% en la producción de biocombustibles. La única solución que puede procesar cualquier tipo de residuo.",
+            ],
+            'feature_three' => [
+                "title" => "Simple y fácil",
+                "content" => "Los desechos de hoy desaparecen mañana y se transforman en energía inmediatamente utilizable en menos de 20 horas. Pellets, aceites y gases de pirólisis."
+            ],
+            'about_us' => [
+                'head' => 'ACERCA DE NOSOTROS',
+                "title" => 'Bienvenido a Sustainable Energy Services',
+                "content" => "Junto con nuestra red de socios, diseñamos, instalamos y mantenemos estaciones de procesamiento de residuos altamente especializadas para un mundo mejor y más limpio. 
+                <Br /> No enterramos los residuos, nunca. Pequeñas, medianas o grandes empresas, todas generan residuos que se pueden transformar en productos energéticos como gas, biocombustible y biochar.
+                 Todos estos son fuentes de energía y sabemos cómo aprovecharlos para convertirlos en energía viable. Descubre hoy cómo podemos ayudar a empresas como la tuya.",
+                'maximize' => "Maximizar los recursos energéticos",
+                'quality' => "Solución energética de calidad",
+                'biofuel' =>  "Biocombustible a partir de aceite de pirólisis",
+                'pyrolysis_gas' => "Gas de pirólisis",
+                'biochar' => "Biochar"
+
+            ],
+            'our_services' => [
+                'section_title' => 'NUESTROS SERVICIOS',
+                'main_title' => 'Servicios de producción y eliminación de energía Ecosolution',
+                'project_title' => 'Gestión de proyectos',
+                'project_text' => "Porque cada proyecto tiene requisitos únicos, adaptamos soluciones únicas y adecuadas para cada cliente. Hay proyectos pequeños que necesitan cuidado especial o sistemas 
+                complejos que requieren una planificación adecuada, nosotros nos encargamos. Se involucran múltiples pasos: desde la planificación, adquisición, instalación hasta el mantenimiento y la capacitación del equipo.",
+                'installing_title' => "Instalación y mantenimiento",
+                'installing_content' => "Nuestros equipos especializados de ingenieros instalarán y verificarán cuidadosamente todos los requisitos del proyecto. Se instalarán máquinas trituradoras de residuos municipales e industriales, 
+                plantas de secado de residuos, plantas de pellets de residuos, plantas de pirólisis de residuos y muchas otras siguiendo esquemas rigurosos y mejores prácticas.",
+                'training_title'    => "Capacitación de tu equipo",
+                'training_content' => "En los primeros 30 días del proyecto, nuestros ingenieros y capacitadores capacitarán a tu equipo y transferirán todos 
+                los conocimientos necesarios para la manipulación de todo el conjunto tecnológico. Nuestro equipo estará encantado 
+                de responder a todas tus preguntas y brindarte la asistencia que necesites."
+            ],
+            "video" => "TRANSFORMA LOS RESIDUOS EN ENERGÍA LIMPIA. FÁCIL Y CONTINUAMENTE.",
+            "counter" => [
+                "instalations" => "Instalaciones",
+                "continents" => "Continentes",
+                "countries" => "Países",
+                "energy_products" => "Productos energéticos"
+            ],
+            "what_we_do" => [
+                "section" => "LO QUE HACEMOS",
+                "title" => "Te ayudamos a transformar tu vertedero en energía reutilizable gratuita.",
+                "center_title" => "No entierres los desechos en suelo limpio.",
+                "center_text" => "Utiliza tus desechos para crear energía y mantener el suelo limpio.",
+                "first_text" => "Obtén biogás de pirólisis que te proporcionará calor para el agua.",
+                "second_text" => "Obtén pellets y úsalos como combustible para tu sistema de calefacción.",
+                "third_text" => "Obtén aceite de pirólisis y úsalo para la combustión",
+                "fourth_text" => "Obtén el oro negro de la tierra. Biochar que fertiliza el suelo"                
+            ],
+            "quote" => "La Tierra no nos pertenece; nosotros pertenecemos a la Tierra. Es nuestra responsabilidad protegerla y preservarla para las futuras generaciones",
         ],
+
+        //service page
+        'services' => [
+            'header' => "ELIMINAMOS Y PROHIBIMOS TODOS LOS VERTEDEROS",
+            'main_services' => [
+                'title' => 'SERVICIOS PRINCIPALES',
+                "design_and_planing" => "DISEÑO Y PLANIFICACIÓN DE OBRAS INDUSTRIALES",
+                "design_and_development" => "DISEÑO Y DESARROLLO DE SISTEMAS MECÁNICOS",
+                "installations" => "INSTALACIÓN Y MANTENIMIENTO DE EQUIPOS Y MAQUINARIA",
+                "analysis" => "ANÁLISIS Y OPTIMIZACIÓN DE PROCESOS EN LA INDUSTRIA DEL PETRÓLEO Y GAS NATURAL.",
+                "evaluation" => " EVALUACIÓN Y GESTIÓN DE RIESGOS EN LA INDUSTRIA DEL PETRÓLEO Y GAS NATURAL.",
+                "construction" => "CONSTRUCCIÓN Y SUPERVISIÓN DE PROYECTOS DE INFRAESTRUCTURA." 
+            ],
+            'main_products' => [
+                "title" => "PRODUCTOS PRINCIPALES",
+                "equipment" => "EQUIPOS PARA LA GESTIÓN DE RESIDUOS INDUSTRIALES",
+                "environment" => "SISTEMAS DE CONTROL AMBIENTAL PARA LA AGRICULTURA",
+                "medical" => "PLANTA DE PIRÓLISIS DE RESIDUOS MÉDICOS",
+                "waste" => "MÁQUINAS TRITURADORAS DE RESIDUOS MUNICIPALES E INDUSTRIALES",
+                "drying" => "PLANTA DE SECADO DE RES",
+                "industrial" =>  "Municipal and industrial waste crushing machines." 
+            ],
+            "title" => "Únete a nosotros en la gestión de residuos, ayúdanos a proteger el medio ambiente y obtener una economía circular sostenible.",
+            "content_one" => "Nuestro equipo altamente capacitado y comprometido está listo para brindarte soluciones personalizadas y eficientes
+             de gestión de residuos. Confía en nosotros para convertir los residuos en oportunidades 
+             y ser parte del cambio hacia un mundo más limpio y saludable",
+            "panel_one" => [
+                'title' => "1. EcoHornet Pyrolysis Technology",
+                "content" => "La planta de pirólisis EcoHornet es una tecnología única en el mundo que nos permite procesar de manera 
+                eficiente y segura todo tipo de residuos municipales, industriales y peligrosos."
+
+            ],
+            "panel_two" => [
+                'title' => " 2. Operation Safety System",
+                "content" => "La planta de pirólisis EcoHornet cuenta con un riguroso sistema de seguridad para garantizar una operación 
+                libre de riesgos. Los protocolos de seguridad implementados aseguran la protección de los trabajadores y del medio ambiente 
+                durante todo el proceso de pirólisis.                "
+
+            ],
+            "panel_three" => [
+                'title' => " 3. Economic Benefits and Return on Investment:",
+                "content" => "Invertir en una planta EcoSolution & EcoHornet ofrece numerosos beneficios económicos a largo plazo. 
+                Además de la reducción de costos asociados a la gestión de residuos, la planta permite la recuperación de materiales valiosos como el 
+                aceite de pirólisis y el gas de pirólisis, que pueden ser utilizados y gestionados para generar electricidad y obtener ingresos adicionales."
+
+            ],
+            "panel_four" => [
+                'title' => " 4. Benefits of Pyrolysis Oil and Pyrolysis Gas in Electricity Production:",
+                "content" => "La planta EcoSolution & EcoHornet permite la producción de aceite de pirólisis y gas de pirólisis de alta calidad.
+                 Estos productos pueden ser gestionados y utilizados como combustibles para generar electricidad de manera eficiente y sostenible, 
+                 reduciendo así la dependencia de fuentes de energía convencionales y contribuyendo a la preservación del medio ambiente."
+
+            ],
+            "panel_five" => [
+                'title' => "5. Environmental Benefits",
+                "content" => "Una de las principales ventajas de una planta EcoSolution & EcoHornet es su impacto positivo en el medio ambiente a 
+                través del proceso de pirólisis. Ayuda a evitar los vertederos tradicionales, reducir las emisiones de gases de efecto invernadero
+                 y prevenir la contaminación del suelo y el agua. Además, promueve la producción de energía renovable a partir de los productos generados."
+
+            ],
+            "panel_six" => [
+                'title' => "6. Waste Separation and Processing Stages",
+                "content" => "La planta EcoSolution & EcoHornet consta de varias etapas, que incluyen la recepción de residuos, clasificación, trituración, 
+                secado, peletización y producción de gas, aceite de pirólisis y biochar. El procesamiento de los residuos facilita su manejo y almacenamiento. "
+
+            ],
+            "panel_seven" => [
+                'title' => " 7. Scientific, Technical, Professional, and Economic Arguments:",
+                "content" => " La tecnología de pirólisis EcoHornet se basa en sólidos fundamentos científicos y 
+                técnicos. Cuenta con el respaldo de profesionales con experiencia en el campo de la gestión de residuos y la producción de energía. Desde una perspectiva económica, invertir en una planta EcoSolution & EcoHornet ofrece una excelente oportunidad de negocio, con el potencial de obtener beneficios tanto económicos como ambientales."
+
+            ]
+
+        ],
+        'about_us' => [
+            'head' => 'SOBRE NOSOTROS',
+            'about_us' => `SOBRE NOSOTROS`,
+            'text' => 'Especializados en brindar servicios de ejecución y consultoría en ingeniería industrial, ingeniería ambiental, ingeniería mecánica, ingeniería de petróleo y gas natural.',
+            'project_management' => 'Gestión de proyectos',
+            'consultancy' => 'Consultoría',
+            'install' => 'Instalación',
+            'training'=>'Training and post selling services',
+            'working' => 'working progress',
+            'desing' => 'Design Process',
+            'budget' => 'Budget Planning',
+            'aquisition' => 'Aquisition and Installation',
+            'training' => 'Training and Maintanence'
+        ]
     ],
+    
     // Add more languages and translations as needed
 ];
