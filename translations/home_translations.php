@@ -4,6 +4,15 @@
 $translations = [
     'en' => [
 
+        'menu' => [
+            'home' => "HOME",
+            'product_and_services' => "PRODUCT AND SERVICES",
+            'about_us' => "ABOUT US",
+            "contact" => "CONTACT",
+            "freequote" => "FREE QUOTE",
+            "ournewsletter" => "our newsletter",
+            "touch" => "Never miss a post! keep in touch with us."
+        ],
         //home page
         'home' => [
             'Hero' => [
@@ -167,7 +176,15 @@ $translations = [
     
     //spanish translation
     'es' => [
-
+        'menu' => [
+            'home' => "INICIO",
+            'product_and_services' => "PRODUCTOS Y SERVICIOS",
+            'about_us' => "SOBRE NOSOTROS",
+            'contact' => "CONTACTO",
+            'freequote' => "COTIZACIÓN GRATUITA",
+            'ournewsletter' => "NUESTRO BOLETÍN",
+            'touch' => "¡Nunca te pierdas una publicación! Mantente en contacto con nosotros."
+        ],
         //home page
         'home' => [
             'Hero' => [

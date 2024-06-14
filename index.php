@@ -84,6 +84,8 @@ $app->get('/en', function (Request $request, Response $response, $args) use ($tr
  
 });
 
+
+
 $app->get('/{locale}/home', function (Request $request, Response $response, $args) use ($translations){
 
   
@@ -91,13 +93,15 @@ $app->get('/{locale}/home', function (Request $request, Response $response, $arg
 
     if(!array_key_exists($locale, $translations)) {$locale = 'en'; }
     $objectTranslations = (json_decode(json_encode($translations)));
-    $translations = ["translations" => $objectTranslations->$locale->home];
+    $translations = ["translations" => $objectTranslations->$locale->home, "menu" => $objectTranslations->$locale->menu];
     $view = Twig::fromRequest($request);
     return  $view->render($response, 'index.html',  $translations); 
  
 });
 
 $twig = Twig::create('templates', ['cache' => false]);
+
+
 
 $app->get('/{locale}/contact', function (Request $request, Response $response, $args) {
     $view = Twig::fromRequest($request);
@@ -112,27 +116,32 @@ $app->post('/contact', function (Request $request, Response $response, $args) {
    return  $view->render($response, 'contact.html', $data); 
 })->setName('contact');
 
+
+
 $app->get('/{locale}/services', function (Request $request, Response $response, $args) use($translations){
 
     $locale = $request->getAttribute('locale');
      if(!array_key_exists($locale, $translations)) {$locale = 'en'; }
     $objectTranslations = (json_decode(json_encode($translations)));
 
-    $translations = ["translations" => $objectTranslations->$locale->services];
+    $translations = ["translations" => $objectTranslations->$locale->services,  "menu" => $objectTranslations->$locale->menu];
 
     $view = Twig::fromRequest($request);
    return  $view->render($response, 'services.html', $translations); 
 })->setName('services');
+
+
+
 
 $app->get('/{locale}/about', function (Request $request, Response $response, $args) use($translations){
     $locale = $request->getAttribute('locale');
     if(!array_key_exists($locale, $translations)) {$locale = 'en'; }
    $objectTranslations = (json_decode(json_encode($translations)));
 
-   $translations = ["translations" => $objectTranslations->$locale->services];
+   $translations = ["translations" => $objectTranslations->$locale->services,  "menu" => $objectTranslations->$locale->menu];
 
    $view = Twig::fromRequest($request);
-   return  $view->render($response, 'about.html', ['locale' => $locale ]); 
+   return  $view->render($response, 'about.html', $translations); 
 })->setName('about');
 
 $app->run();
