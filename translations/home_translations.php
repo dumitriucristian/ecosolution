@@ -32,6 +32,11 @@ $translations = [
                 "title" => "Simple & Easy",
                 "content" => "Today's garbage disappears by tomorrow and is transformed in less than 20 hours into immediately usable energy. Pellets, oils and pyrolysis gases"
             ],
+            'video' =>[
+                'title' => " - WATCH VIDEO - WATCH VIDEO - WATCH VIDEO",
+                'text' => "TRANSFORM DISPOSAL INTO CLEAN ENERGY. EASY AND CONTINUOUSLY"
+
+            ],
             'about_us' => [
                 'head' => 'ABOUT US',
                 "title" => 'Welcome to Sustainable Energy Services',
@@ -62,7 +67,6 @@ $translations = [
                                         required for manipulation of the entire technological stack Our team will be happy to answer all 
                                         your questions and provide you with the assistance you need"
             ],
-            "video" => "TRANSFORM DISPOSAL INTO CLEAN ENERGY. EASY AND CONTINUOUSLY",
             "counter" => [
                 "instalations" => "instalations",
                 "continents" => "continents",
@@ -217,6 +221,11 @@ $translations = [
                 'biochar' => "Biochar"
 
             ],
+            'video' =>[
+                'title' => " - MIRAR VIDEO - MIRAR VIDEO - MIRAR VIDEO",
+                'text' => "TRANSFORMAR LA ELIMINACIÓN DE RESIDUOS EN ENERGÍA LIMPIA. FÁCIL Y CONTINUAMENTE"
+
+            ],
             'our_services' => [
                 'section_title' => 'NUESTROS SERVICIOS',
                 'main_title' => 'Servicios de producción y eliminación de energía Ecosolution',
@@ -231,7 +240,6 @@ $translations = [
                 los conocimientos necesarios para la manipulación de todo el conjunto tecnológico. Nuestro equipo estará encantado 
                 de responder a todas tus preguntas y brindarte la asistencia que necesites."
             ],
-            "video" => "TRANSFORMA LOS RESIDUOS EN ENERGÍA LIMPIA. FÁCIL Y CONTINUAMENTE.",
             "counter" => [
                 "instalations" => "Instalaciones",
                 "continents" => "Continentes",
