@@ -105,10 +105,16 @@ $twig = Twig::create('templates', ['cache' => false]);
 
 
 
-$app->get('/{locale}/contact', function (Request $request, Response $response, $args) {
+$app->get('/{locale}/contact', function (Request $request, Response $response, $args) use ($translations) {
+
+    $locale = $request->getAttribute('locale');
+    if(!array_key_exists($locale, $translations)) {$locale = 'en'; }
+   $objectTranslations = (json_decode(json_encode($translations)));
+
+   $translations = ["translations" => $objectTranslations->$locale->services,  "menu" => $objectTranslations->$locale->menu];
     $view = Twig::fromRequest($request);
 
-   return  $view->render($response, 'contact.html'); 
+   return  $view->render($response, 'contact.html', $translations); 
 })->setName('contact');
 
 $app->post('/contact', function (Request $request, Response $response, $args) {
@@ -146,8 +152,10 @@ $app->get('/{locale}/about', function (Request $request, Response $response, $ar
    return  $view->render($response, 'about.html', $translations); 
 })->setName('about');
 
+
+
 try {
-    
+
     $app->run();
 
 } catch (HttpNotFoundException $e){
