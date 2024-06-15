@@ -12,7 +12,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 mt-1-9 wow fadeIn" data-wow-delay="400ms">                         
-                        <form class="quform newsletter-form" action="/quform/newsletter-two.php" method="post" enctype="multipart/form-data" onclick="">
+                        <form class="quform newsletter-form" action="/quform/newsletter-two.php" method="post" enctype="multipart/form-data" onsubmit="return; false;">
                             <div class="quform-elements">
                                 <div class="row">
 
@@ -20,7 +20,7 @@
                                     <div class="col-md-12">
                                         <div class="quform-element mb-0">
                                             <div class="quform-input">
-                                                <input class="form-control" id="email_address" type="text" name="email_address" placeholder="Subscribe with us">
+                                                <input class="form-control" id="email_address" type="text" name="email_address" placeholder="Subscribe with us" >
                                             </div>
                                         </div>
                                     </div>
@@ -29,7 +29,7 @@
                                     <!-- Begin Submit button -->
                                     <div class="col-md-12">
                                         <div class="quform-submit-inner">
-                                            <button class="btn btn-white text-white m-0" type="submit"><i class="fas fa-paper-plane"></i></button>
+                                           <!-- <button class="btn btn-white text-white m-0" type="submit" onclick="return;" ><i class="fas fa-paper-plane"></i></button>-->
                                         </div>
                                         <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
                                     </div>
@@ -57,7 +57,7 @@
                                     </div>
                                     <div class="flex-grow-1">
                                         <h4 class="mb-0 text-white h6 lh-base font-weight-500 letter-spacing-1">José Aguirre 1422, Cochabamba - Bolivia</h4>
-                                    </div>
+                                    </div>disabled
                                 </div>
                             </div>
                             <div class="col-sm-6 col-lg-4 mt-1-9">
