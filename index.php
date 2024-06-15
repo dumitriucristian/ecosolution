@@ -7,6 +7,8 @@ use Slim\Views\TwigMiddleware;
 use Dotenv\Dotenv;
 use Symfony\Component\Translation\Translator;
 use Symfony\Component\Translation\Loader\ArrayLoader;
+use Slim\Exception\HttpNotFoundException;
+
 require __DIR__ . '/vendor/autoload.php';
 
 //translations
@@ -144,4 +146,17 @@ $app->get('/{locale}/about', function (Request $request, Response $response, $ar
    return  $view->render($response, 'about.html', $translations); 
 })->setName('about');
 
-$app->run();
+try {
+    
+    $app->run();
+
+} catch (HttpNotFoundException $e){
+    // Create a new response object
+    $response = new \Slim\Psr7\Response();
+    
+    // Render the 404-page.html with Twig
+    $response = $twig->render($response, '404-page.html', $translations);
+    
+    header('HTTP/1.1 404 Not Found');
+    echo $response->getBody();
+}
