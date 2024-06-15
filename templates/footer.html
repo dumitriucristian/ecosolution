@@ -163,3 +163,20 @@
     <script src="/quform/js/scripts.js"></script>
 
     <!-- all js include end -->
+    <script>
+        $(".navbar-toggler").click(function(){
+            var isOpen = $(this).hasClass('open');
+
+            console.log($(this).hasClass('open'));
+            if($(this).hasClass('open')){
+                //console.log('has');
+                $(this).removeClass('open');
+                $(".navbar-nav").css("display","none");
+
+            }else{
+                $(".navbar-nav").css("display","block");
+                $(this).addClass('open');
+//                console.log('has-not');
+            }
+        });
+    </script>
